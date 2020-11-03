@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="container1">
+    <div class="container_background">
         <div class="img-wrapper">
             <img src="https://cdn2.hubspot.net/hubfs/202339/canvas/images/parallax/Website-Design-Background.png" />
         </div>
@@ -14,9 +14,22 @@
     <div class="cards">
         <div class="card content">
             <div class="card-content">
-                <button type="button" id="btn1">but</button><br />
-                <button type="button">Click Me!</button>
+                <!-- <button type="button" id="btn1">but</button><br />
+                <button type="button">Click Me!</button> -->
+                <button onclick="content()">Click Me</button>
+                <div class="container_one" id="container">
+                    <div id="elements">
+                        <p> ipsum dolor, sit amet consectetur adipisicing elit. Corporis nesciunt deleniti corrupti odit, quis, ab harum unde qui iure cum recusandae perspiciatis, ad sit ea nobis doloremque accusamus aliquid nemo.</p>
+                    </div>
 
+                </div>
+                <br>
+                <button onclick="contentTwo()">Another one</button>
+                <div class="container_two" id="container2">
+                    <div id="elements1">
+                        <p> ipsum dolor, sit amet consectetur adipisicing elit. Corporis nesciunt deleniti corrupti odit, quis, ab harum unde qui iure cum recusandae perspiciatis, ad sit ea nobis doloremque accusamus aliquid nemo.</p>
+                    </div>
+                </div>
                 <!-- <div class="card-title">ATTENDANCE</div> -->
             </div>
         </div>
@@ -31,7 +44,7 @@
                         Submit
                     </button> -->
                     <div class="container1">
-                        <button class="btn">
+                        <button type="button" class="btn">
                             <span onclick="uploadFile('assignments','file')">SUBMIT</span>
                         </button>
                     </div>
@@ -51,9 +64,14 @@
                 <div class="container">
                     <input type="file" id="file-exp" class="inputfile" style="z-index: 1" />
                     <span id="file-name" class="file-box"></span>
-                    <button type="button" onclick="uploadFile('experiments','file-exp')">
+                    <!-- <button type="button" onclick="uploadFile('experiments','file-exp')">
                         Submit
-                    </button>
+                    </button> -->
+                    <div class="container1">
+                        <button type="button" class="btn">
+                            <span onclick="uploadFile('experiments','file-exp')">SUBMIT</span>
+                        </button>
+                    </div>
                 </div>
 
             </div>
