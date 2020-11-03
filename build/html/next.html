@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/next.css" />
+  </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/next.css">
-</head>
-
-<body>
+  <body>
     <div class="container1">
-        <div class="img-wrapper">
-            <img src="https://cdn2.hubspot.net/hubfs/202339/canvas/images/parallax/Website-Design-Background.png" />
-        </div>
+      <div class="img-wrapper">
+        <img
+          src="https://cdn2.hubspot.net/hubfs/202339/canvas/images/parallax/Website-Design-Background.png"
+        />
+      </div>
     </div>
     <div id="accordion">
-        <!-- <div class="card">
+      <!-- <div class="card">
             <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
                     <button id="station" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -28,9 +29,7 @@
                 </div>
             </div>
         </div> -->
-
     </div>
-
 
     <!-- <div class="split right">
         <div class="centered">
@@ -43,50 +42,48 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
     <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
-            authDomain: "planned-always-protected.firebaseapp.com",
-            databaseURL: "https://planned-always-protected.firebaseio.com",
-            projectId: "planned-always-protected",
-            storageBucket: "planned-always-protected.appspot.com",
-            messagingSenderId: "12130222742",
-            appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7"
-        };
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-        console.log(' initialized ');
+      var firebaseConfig = {
+        apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
+        authDomain: "planned-always-protected.firebaseapp.com",
+        databaseURL: "https://planned-always-protected.firebaseio.com",
+        projectId: "planned-always-protected",
+        storageBucket: "planned-always-protected.appspot.com",
+        messagingSenderId: "12130222742",
+        appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      console.log(" initialized ");
     </script>
 
     <script src="../js/next.js"></script>
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a onclick="signOut()">Sign Out</a>
-
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a onclick="signOut()">Sign Out</a>
     </div>
 
-    <button class="openbtn" onclick="openNav()">&#60; </button> ,
+    <button class="openbtn" onclick="openNav()">&#60;</button> ,
     <script>
-        /* Set the width of the sidebar to 250px (show it) */
-        function openNav() {
-            document.getElementById("mySidepanel").style.width = "350px";
-        }
+      /* Set the width of the sidebar to 250px (show it) */
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "350px";
+      }
 
-        /* Set the width of the sidebar to 0 (hide it) */
-        function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0";
-        }
+      /* Set the width of the sidebar to 0 (hide it) */
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
     </script>
-    <script src="../js/upload.js"></script>
-    <input type="file" id="file" class="inputfile" style="z-index: 1;" onchange="uploadFile(this)">
-    <span id="file-name" class="file-box"></span>
-</body>
+  </body>
 
-<head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="next.css">
-    <link rel="stylesheet" href="../css/next1.css">
-
-</head>
-
-
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="next.css" />
+    <link rel="stylesheet" href="../css/next1.css" />
+  </head>
 </html>
