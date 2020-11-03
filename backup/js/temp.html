@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="../js/sweetalert2.js"></script> -->
+    <!-- <script type="text/javascript" src="../js/Validation.js"></script> -->
+
+    <title>Temp</title>
+</head>
+
+<body>
+    <button id="tempSignOut" onclick="signOut()">Sign Out</button>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
+            authDomain: "planned-always-protected.firebaseapp.com",
+            databaseURL: "https://planned-always-protected.firebaseio.com",
+            projectId: "planned-always-protected",
+            storageBucket: "planned-always-protected.appspot.com",
+            messagingSenderId: "12130222742",
+            appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="js/Validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        /*Creating variables*/
+        $name = $_POST["name"];
+        $address = $_POST["address"];
+        $age = $_POST["age"];
+
+
+        $dbhost = "localhost"; /*most of the time it's localhost*/
+        $username = "amitgupta0220";
+        $password = "Amit@0220";
+        $dbname = "mydatabaDBMSse";
+
+        $mysql = mysqli_connect($dbhost, $username, $password, $dbname); //It connects
+        $query = "INSERT INTO yourtable (name,address,age) VALUES $name, $address, $age";
+        mysqli_query($mysql, $query);
+    }
+?>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WDL Mini</title>
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- update the version number as needed -->
+        <!-- <script defer src="/__/firebase/7.23.0/firebase-app.js"></script> -->
+        <!-- include only the Firebase features as you need -->
+        <!-- <script defer src="/__/firebase/7.23.0/firebase-auth.js"></script> -->
+        <!-- <script defer src="/__/firebase/7.23.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.23.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.23.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.23.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.23.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.23.0/firebase-performance.js"></script> -->
+        <!-- initialize the SDK after all desired features are loaded -->
+        <!-- <script defer src="/__/firebase/init.js"></script> -->
+
+    </head>
+
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
+                authDomain: "planned-always-protected.firebaseapp.com",
+                databaseURL: "https://planned-always-protected.firebaseio.com",
+                projectId: "planned-always-protected",
+                storageBucket: "planned-always-protected.appspot.com",
+                messagingSenderId: "12130222742",
+                appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7"
+            };
+            firebase.initializeApp(firebaseConfig);
+            console.log('initialized');
+        </script>
+        <script src="js/Validation.js"></script>
+        <div class="container">
+            <div class="header">
+                <h2>SIGN IN</h2>
+            </div>
+            <form id="form" class="form" action="temp.html" method="post">
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="mail@mail.com" id="email" onblur="checkUserSIEmail()">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small id="userSIEmailError">Enter proper email address</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Type your password" id="password" onblur="checkUserSIPassword()">
+                    <!--onblur="checkUserSIPassword()-->
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small id="userSIPasswordError">Enter valid password</small>
+                </div>
+                <button onclick="signIn()">Submit</button>
+            </form>
+        </div>
+
+    </body>
+
+    </html>

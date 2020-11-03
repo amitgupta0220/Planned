@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/assignment.css" />
+</head>
+
+<body>
+
+
+    <div class="cards">
+        <div class="card content">
+            <div class="card-content">
+                <button type="button" id="btn1">but</button><br>
+                <button type="button">Click Me!</button>
+
+                <!-- <div class="card-title">ATTENDANCE</div> -->
+            </div>
+
+        </div>
+
+        <div class="card content">
+            <div class="card-content">
+
+                <h2>Submit Assignment</h2>
+                <input type="file" id="file" class="inputfile" style="z-index: 1;">
+                <span id="file-name" class="file-box"></span>
+                <button type="button" onclick="uploadFile()">Submit</button>
+                <!-- <div class=" card-img ">
+                    <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80 "
+                        alt="keyboard " />
+            </div> -->
+
+                <!-- <div class="card-title ">ASSIGNMENTS</div> -->
+            </div>
+        </div>
+        <div class="card content ">
+            <div class="card-content ">
+                <button type="button2 ">Click Me!</button>
+                <!-- <div class=" card-img">
+                <img src="https://images.unsplash.com/photo-1519326844852-704caea5679e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2034&q=80"
+                    alt="Controller" />
+        </div> -->
+
+                <!-- <div class="card-title">EXPERIMENTS</div> -->
+            </div>
+        </div>
+        <div class="card form">
+            <div class="form-title">NOTES</div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
+            authDomain: "planned-always-protected.firebaseapp.com",
+            databaseURL: "https://planned-always-protected.firebaseio.com",
+            projectId: "planned-always-protected",
+            storageBucket: "planned-always-protected.appspot.com",
+            messagingSenderId: "12130222742",
+            appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        console.log('initialized');
+    </script>
+    <script src="../js/upload.js" />
+</body>
+
+
+</html>
