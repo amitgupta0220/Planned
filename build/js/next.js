@@ -22,6 +22,7 @@ db.collection("collectionOfSubjects")
 		// $("#station_box").html(""); // This will empty your station box
 		var n = 0;
 		s.forEach(function (x) {
+			var user = firebase.auth().currentUser;
 			// console.log(x.data());
 			$("#accordion").append(
 				`
@@ -49,7 +50,11 @@ db.collection("collectionOfSubjects")
     <div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
         <div class="square-container2">
             <div class="align-center"></div>
-            <a href="../html/assignment.html" target="_blank" class="boxshadow kallyas-button">Assignments</a>
+            <a href="../html/assignment.html?subject=` +
+					x.data().subject +
+					`&uid=` +
+					user.uid +
+					`" target="_blank" class="boxshadow kallyas-button">Assignments</a>
         </div>
         <div class="flip-overlay"></div>
     </div>

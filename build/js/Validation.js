@@ -36,7 +36,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 		alert("Signed in " + user.uid);
 		setTimeout(function () {
 			window.location.replace(
-				"../html/next.html?" + "sem=" + sem + "&year=" + year
+				"../build/html/next.html?" + "sem=" + sem + "&year=" + year
 			); //----------------change page here---------------//
 		}, 1000);
 		// var firebaseRef = firebase.database().ref();
