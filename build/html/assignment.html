@@ -6,6 +6,11 @@
 </head>
 
 <body>
+    <div class="container1">
+        <div class="img-wrapper">
+            <img src="https://cdn2.hubspot.net/hubfs/202339/canvas/images/parallax/Website-Design-Background.png" />
+        </div>
+    </div>
     <div class="cards">
         <div class="card content">
             <div class="card-content">
@@ -22,9 +27,14 @@
                 <div class="container">
                     <input type="file" id="file" class="inputfile" style="z-index: 1" />
                     <span id="file-name" class="file-box"></span>
-                    <button type="button" onclick="uploadFile('assignments','file')">
+                    <!-- <button type="button" onclick="uploadFile('assignments','file')">
                         Submit
-                    </button>
+                    </button> -->
+                    <div class="container1">
+                        <button class="btn">
+                            <span onclick="uploadFile('assignments','file')">SUBMIT</span>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- <div class=" card-img ">
