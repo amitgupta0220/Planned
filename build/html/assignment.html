@@ -16,22 +16,44 @@
       </div>
 
       <div class="card content">
-        <div class="card-content">
-          <h2>Submit Assignment</h2>
-          <input type="file" id="file" class="inputfile" style="z-index: 1" />
-          <span id="file-name" class="file-box"></span>
-          <button type="button" onclick="uploadFile()">Submit</button>
-          <!-- <div class=" card-img ">
-                    <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80 "
-                        alt="keyboard " />
-            </div> -->
+        <div class="contentcard">
+          <div class="card-content">
+            <h2>Submit Assignment</h2>
+            <div class="container">
+              <input
+                type="file"
+                id="file"
+                class="inputfile"
+                style="z-index: 1"
+              />
+              <span id="file-name" class="file-box"></span>
+              <button type="button" onclick="uploadFile('assignments','file')">
+                Submit
+              </button>
+            </div>
 
-          <!-- <div class="card-title ">ASSIGNMENTS</div> -->
+            <!-- <div class=" card-img ">
+                      <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80 "
+                          alt="keyboard " />
+              </div> -->
+
+            <!-- <div class="card-title ">ASSIGNMENTS</div> -->
+          </div>
         </div>
       </div>
       <div class="card content">
         <div class="card-content">
-          <button type="button2 ">Click Me!</button>
+          <h2>Submit Experiments</h2>
+          <input
+            type="file"
+            id="file-exp"
+            class="inputfile"
+            style="z-index: 1"
+          />
+          <span id="file-name" class="file-box"></span>
+          <button type="button" onclick="uploadFile('experiments','file-exp')">
+            Submit
+          </button>
           <!-- <div class=" card-img">
                 <img src="https://images.unsplash.com/photo-1519326844852-704caea5679e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2034&q=80"
                     alt="Controller" />
