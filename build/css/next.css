@@ -1,37 +1,36 @@
 body {
-    font-family: Arial;
-    color: white;
+  font-family: Arial;
+  color: white;
 }
 
 .split {
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .left {
-    left: 0;
-    width: 75%;
-    background-color: #111;
+  left: 0;
+  width: 75%;
+  background-color: #111;
 }
 
 .right {
-    right: 0;
-    width: 25%;
-    background-color: red;
+  right: 0;
+  width: 25%;
+  background-color: red;
 }
 
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-
 
 /* 
 .boxshadow {
@@ -39,414 +38,406 @@ body {
 } */
 
 .square-flip {
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
-    -webkit-transform: perspective(1000px);
-    -moz-transform: perspective(1000px);
-    -ms-transform: perspective(1000px);
-    transform: perspective(1000px);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    /*border:1px solid #efefef;*/
-    position: relative;
-    align-self: center;
-    float: left;
-    margin: 20px;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: perspective(1000px);
+  -moz-transform: perspective(1000px);
+  -ms-transform: perspective(1000px);
+  transform: perspective(1000px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  /*border:1px solid #efefef;*/
+  position: relative;
+  align-self: center;
+  float: left;
+  margin: 20px;
 }
 
 .square-flip {
-    width: 350px;
-    height: 375px;
+  width: 350px;
+  height: 375px;
 }
 
 .square,
 .square2 {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .square {
-    background-size: cover;
-    background-position: center center;
-    -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .square-flip .square {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
 }
 
 .square-flip:hover .square {
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-    transform-style: preserve-3d;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
 }
 
 .square2 {
-    background-size: cover;
-    background-position: center center;
-    -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .square-flip .square2 {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
 }
 
 .square-flip:hover .square2 {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
 }
-
 
 /*Square content*/
 
 .square-container {
-    padding: 40px;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    -webkit-transform: translateY(-50%) translateX(0px) scale(1);
-    -ms-transform: translateY(-50%) translateX(0px) scale(1);
-    transform: translateY(-50%) translateX(0px) scale(1);
-    transform-style: preserve-3d;
-    z-index: 2;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  -webkit-transform: translateY(-50%) translateX(0px) scale(1);
+  -ms-transform: translateY(-50%) translateX(0px) scale(1);
+  transform: translateY(-50%) translateX(0px) scale(1);
+  transform-style: preserve-3d;
+  z-index: 2;
 }
 
 .square-flip:hover .square-container {
-    -webkit-transform: translateY(-50%) translateX(-650px) scale(0.88);
-    -ms-transform: translateY(-50%) translateX(-650px) scale(0.88);
-    transform: translateY(-50%) translateX(-650px) scale(0.88);
-    transform-style: preserve-3d;
+  -webkit-transform: translateY(-50%) translateX(-650px) scale(0.88);
+  -ms-transform: translateY(-50%) translateX(-650px) scale(0.88);
+  transform: translateY(-50%) translateX(-650px) scale(0.88);
+  transform-style: preserve-3d;
 }
 
 .square-container2 {
-    padding: 40px;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
-    -webkit-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(0.88);
-    -ms-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(0.88);
-    transform: translateY(-50%) translateX(650px) translateZ(60px) scale(0.88);
-    transform-style: preserve-3d;
-    z-index: 2;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.5, 0.3, 0.3, 1);
+  -webkit-transform: translateY(-50%) translateX(650px) translateZ(60px)
+    scale(0.88);
+  -ms-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(0.88);
+  transform: translateY(-50%) translateX(650px) translateZ(60px) scale(0.88);
+  transform-style: preserve-3d;
+  z-index: 2;
 }
 
 .square-flip:hover .square-container2 {
-    -webkit-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
-    -ms-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
-    transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
-    transform-style: preserve-3d;
+  -webkit-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+  -ms-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+  transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+  transform-style: preserve-3d;
 }
-
 
 /*Style text*/
 
 .square-flip h2 {
-    color: #e2b646;
-    font-family: "Mukta", sans-serif;
-    font-weight: 700;
-    font-size: 22px;
+  color: #e2b646;
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
 }
 
 .square-flip h3 {
-    color: #e2b646;
-    font-family: "Mukta", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+  color: #e2b646;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
 }
-
 
 /*Elements*/
 
 .flip-overlay {
-    display: block;
-    background: #444;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
+  display: block;
+  background: #444;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .align-center {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .kallyas-button {
-    display: block;
-    width: 160px;
-    padding: 18px 30px;
-    font-family: "Mukta", sans-serif;
-    font-weight: 600;
-    color: white;
-    background-color: #e2b646;
-    margin: 0 auto;
-    border-radius: 2px;
-    text-decoration: none;
+  display: block;
+  width: 160px;
+  padding: 18px 30px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  color: white;
+  background-color: #e2b646;
+  margin: 0 auto;
+  border-radius: 2px;
+  text-decoration: none;
 }
 
 .kallyas-button2 {
-    display: block;
-    width: 160px;
-    padding: 18px 30px;
-    font-family: "Mukta", sans-serif;
-    font-weight: 600;
-    color: white;
-    background-color: #e2b646;
-    position: relative;
-    margin: 0 auto;
-    border-radius: 2px;
-    text-decoration: none;
+  display: block;
+  width: 160px;
+  padding: 18px 30px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  color: white;
+  background-color: #e2b646;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 2px;
+  text-decoration: none;
 }
-
 
 /*You can delete this style*/
 
 .centerflipcards {
-    display: block;
-    width: 1330px;
-    height: 440px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 25px;
-    top: 0;
+  display: block;
+  width: 1330px;
+  height: 440px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  top: 0;
 }
 
 .clearfix {
-    clear: both;
+  clear: both;
 }
 
 .centerflipcards p {
-    font-family: "Mukta", sans-serif;
-    font-size: 13px;
-    margin-top: 10px;
-    font-weight: 700;
+  font-family: "Mukta", sans-serif;
+  font-size: 13px;
+  margin-top: 10px;
+  font-weight: 700;
 }
-
 
 /* The sidepanel menu */
 
 .sidepanel {
-    height: 100%;
-    /* Specify a height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Stay on top */
-    top: 0;
-    right: 0;
-    background-color: #111;
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidepanel */
+  height: 100%;
+  /* Specify a height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidepanel */
 }
-
 
 /* The sidepanel links */
 
 .sidepanel a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-
 
 /* When you mouse over the navigation links, change their color */
 
 .sidepanel a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
-
 
 /* Position and style the close button (top right corner) */
 
 .sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-
 
 /* Style the button that is used to open the sidepanel */
 
 .openbtn {
-    font-size: 40px;
-    font-weight: bolder;
-    cursor: pointer;
-    background-color: white;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    position: absolute;
-    right: 0;
-    top: 0;
+  font-size: 40px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: white;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .openbtn:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 body {
-    overflow-x: hidden;
-    width: 100%;
-    height: 100vh;
-    background-color: #282828;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body .frame {
-    width: 80vw;
-    height: 50vw;
-    border-radius: 5%;
-    overflow: auto;
-    position: relative;
+  width: 80vw;
+  height: 50vw;
+  border-radius: 5%;
+  overflow: auto;
+  position: relative;
 }
 
 body .frame .picture {
-    width: 100%;
-    height: 100%;
-    background-image: url("https://ucarecdn.com/f138bad2-15be-4c93-a678-5018869ee28f/");
-    z-index: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    filter: grayscale(100%);
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ucarecdn.com/f138bad2-15be-4c93-a678-5018869ee28f/");
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  filter: grayscale(100%);
 }
 
 body .frame .social {
-    position: absolute;
-    right: 2vw;
-    width: 5vw;
-    height: 5vw;
-    border-radius: 50%;
-    z-index: 2;
+  position: absolute;
+  right: 2vw;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  z-index: 2;
 }
 
 body .frame .social a {
-    display: contents;
+  display: contents;
 }
 
 body .frame .social a i {
-    color: white;
-    margin: 7px;
-    opacity: 0;
+  color: white;
+  margin: 7px;
+  opacity: 0;
 }
 
 body .frame .social.twitter {
-    bottom: 2vw;
-    background-color: #55acee;
+  bottom: 2vw;
+  background-color: #55acee;
 }
 
 body .frame .social.linkedin {
-    bottom: 10vw;
-    background-color: #007bb5;
+  bottom: 10vw;
+  background-color: #007bb5;
 }
 
 body .frame .social.codepen {
-    bottom: 18vw;
-    background-color: #ffdd40;
+  bottom: 18vw;
+  background-color: #ffdd40;
 }
 
 body .frame:hover .picture,
 body .frame.focus .picture {
-    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    transform: scale(1.3) rotate(10deg);
+  transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: scale(1.3) rotate(10deg);
 }
 
 body::-webkit-scrollbar-track {
-    border: 1px solid #000;
-    padding: 2px 0;
-    background-color: #404040;
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #404040;
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #737272;
-    border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #737272;
+  border: 1px solid #000;
 }
 
 .img-wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    z-index: 0;
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  z-index: 0;
+  position: absolute;
+  top: 0;
 }
 
 .img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    animation: scale 25s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  animation: scale 25s;
 }
 
 @keyframes scale {
-    0% {
-        transform: scale(1.3);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
