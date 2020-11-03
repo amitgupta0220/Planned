@@ -4,6 +4,66 @@ subject = unescape(temp[1]);
 temp = parameters[1].split("=");
 uid = unescape(temp[1]);
 console.log(subject + " " + uid);
+db.collection("files")
+	.doc(uid)
+	.collection("assignments")
+	.doc(subject)
+	.collection("assignments")
+	.get()
+	.then((s) => {
+		$("#elements").html("");
+		var n = 0;
+		s.forEach(function (x) {
+			$("#elements").append(
+				`
+				<div class="element1-content" id="head` +
+					n +
+					`">
+					<div class="cardForView">
+						<h4>` +
+					x.data().fileName +
+					`	</h4>
+						<button type="button" id"buttonFOrViewAssignments"><a target="_blank" href="` +
+					x.data().viewURL +
+					`">View PDF</a></button>
+					</div>
+				</div>
+				`
+			);
+			console.log(x.data().fileName);
+			n += 1;
+		});
+	});
+db.collection("files")
+	.doc(uid)
+	.collection("experiments")
+	.doc(subject)
+	.collection("experiments")
+	.get()
+	.then((s) => {
+		$("#elements_two").html("");
+		var n = 0;
+		s.forEach(function (x) {
+			$("#elements2").append(
+				`
+				<div class="element2-content" id="head` +
+					n +
+					`">
+					<div class="cardForViewTwo">
+						<h4>` +
+					x.data().fileName +
+					`	</h4>
+						<button type="button" id"buttonFOrViewExperiments"><a target="_blank" href="` +
+					x.data().viewURL +
+					`">View PDF</a></button>
+					</div>
+				</div>
+				`
+			);
+			console.log(x.data().fileName);
+			n += 1;
+		});
+	});
 function uploadFile(type, elementID) {
 	var firstFile = document.getElementById(elementID).files[0];
 	var storageRef = firebase.storage().ref("files");
@@ -44,9 +104,9 @@ function contentTwo() {
 	var y = document.getElementById("container2");
 	if (y.className.indexOf("show") == -1) {
 		y.className += "show";
-		document.getElementById("elements1").style.display = "none";
+		document.getElementById("elements2").style.display = "none";
 	} else {
 		y.className = y.className.replace("show", "");
-		document.getElementById("elements1").style.display = "block";
+		document.getElementById("elements2").style.display = "block";
 	}
 }
