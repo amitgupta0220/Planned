@@ -67,28 +67,32 @@ db.collection("files")
 function uploadFile(type, elementID) {
 	var firstFile = document.getElementById(elementID).files[0];
 	var storageRef = firebase.storage().ref("files");
-	// var firstFile = ev.files[0]; // get the first file uploaded
-	console.log("started");
-	var uploadTask = storageRef
-		.child(firstFile.name)
-		.put(firstFile)
-		.then((snapshot) => {
-			snapshot.ref.getDownloadURL().then((url) => {
-				db.collection("files")
-					.doc(uid)
-					.collection(type)
-					.doc(subject)
-					.collection(type)
-					.doc(firstFile.name)
-					.set({ fileName: firstFile.name, viewURL: url })
-					.then((s) => {
-						alert("Done uploading");
-					});
+	if (firstFile == undefined) {
+		alert("Select File!");
+	} else {
+		// var firstFile = ev.files[0]; // get the first file uploaded
+		console.log("started");
+		var uploadTask = storageRef
+			.child(firstFile.name)
+			.put(firstFile)
+			.then((snapshot) => {
+				snapshot.ref.getDownloadURL().then((url) => {
+					db.collection("files")
+						.doc(uid)
+						.collection(type)
+						.doc(subject)
+						.collection(type)
+						.doc(firstFile.name)
+						.set({ fileName: firstFile.name, viewURL: url })
+						.then((s) => {
+							alert("Done uploading");
+						});
+				});
 			});
-		});
-	// uploadTask.on("state_changed", function progress(snapshot) {
-	// 	console.log(snapshot.totalBytesTransferred); // progress of upload
-	// });
+		// uploadTask.on("state_changed", function progress(snapshot) {
+		// 	console.log(snapshot.totalBytesTransferred); // progress of upload
+		// });
+	}
 }
 function content() {
 	var x = document.getElementById("container");

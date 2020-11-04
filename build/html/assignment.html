@@ -1,102 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="../css/assignment.css" />
-  </head>
 
-  <body>
+<head>
+    <link rel="stylesheet" href="../css/assignment.css" />
+</head>
+
+<body>
     <div class="container_background">
-      <div class="img-wrapper">
-        <img
-          src="https://cdn2.hubspot.net/hubfs/202339/canvas/images/parallax/Website-Design-Background.png"
-        />
-      </div>
+        <div class="img-wrapper">
+            <img src="https://cdn2.hubspot.net/hubfs/202339/canvas/images/parallax/Website-Design-Background.png" />
+        </div>
     </div>
     <div class="cards">
-      <div class="card content">
-        <div class="card-content">
-          <div class="uploadbuttons">
-            <!-- <button type="button" id="btn1">but</button><br />
+        <div class="card content">
+            <div class="card-content">
+                <div class="uploadbuttons">
+                    <!-- <button type="button" id="btn1">but</button><br />
                 <button type="button">Click Me!</button> -->
-            <button onclick="content()">Uploaded Assignments</button>
-            <div class="container_one" id="container">
-              <div id="elements"></div>
+                    <div class="buttonForAss">
+                        <button onclick="content()" class="btn"><span>Uploaded Assignments</span></button>
+                    </div>
+                    <div class="container_one" id="container">
+                        <div id="elements"></div>
+                    </div>
+                    <br />
+                    <div class="buttonForExp"><button onclick="contentTwo()" class="btn"><span>Uploaded
+                                Experiments</span></button></div>
+                    <div class="container_two" id="container2">
+                        <div id="elements2"></div>
+                    </div>
+                    <!-- <div class="card-title">ATTENDANCE</div> -->
+                </div>
             </div>
-            <br />
-            <button onclick="contentTwo()">Uploaded Experiments</button>
-            <div class="container_two" id="container2">
-              <div id="elements2"></div>
-            </div>
-            <!-- <div class="card-title">ATTENDANCE</div> -->
-          </div>
         </div>
-      </div>
 
-      <div class="card content">
-        <div class="card-content">
-          <div class="textcontainer">
-            <div class="text">
-              <h1>
-                Submit<br />
-                Assignment
-              </h1>
-            </div>
-          </div>
-          <div class="container">
-            <input type="file" id="file" class="inputfile" style="z-index: 1" />
-            <span id="file-name" class="file-box"></span>
-            <!-- <button type="button" onclick="uploadFile('assignments','file')">
+        <div class="card content">
+            <div class="card-content">
+                <div class="textcontainer">
+                    <div class="text">
+                        <h1>
+                            Submit<br /> Assignment
+                        </h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <input type="file" id="file" class="inputfile" style="z-index: 1" />
+                    <span id="file-name" class="file-box"></span>
+                    <!-- <button type="button" onclick="uploadFile('assignments','file')">
                         Submit
                     </button> -->
-            <div class="container1">
-              <button type="button" class="btn">
-                <span onclick="uploadFile('assignments','file')">SUBMIT</span>
-              </button>
-            </div>
-          </div>
+                    <div class="container1">
+                        <button type="button" class="btn">
+                            <span onclick="uploadFile('assignments','file')">SUBMIT</span>
+                        </button>
+                    </div>
+                </div>
 
-          <!-- <div class=" card-img ">
+                <!-- <div class=" card-img ">
                       <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80 "
                           alt="keyboard " />
               </div> -->
 
-          <!-- <div class="card-title ">ASSIGNMENTS</div> -->
-        </div>
-      </div>
-      <div class="card content">
-        <div class="card-content">
-          <div class="textcontainer">
-            <div class="text">
-              <h1>
-                Submit<br />
-                experiments
-              </h1>
+                <!-- <div class="card-title ">ASSIGNMENTS</div> -->
             </div>
-          </div>
-          <div class="container">
-            <input
-              type="file"
-              id="file-exp"
-              class="inputfile"
-              style="z-index: 1"
-            />
-            <span id="file-name" class="file-box"></span>
-            <!-- <button type="button" onclick="uploadFile('experiments','file-exp')">
+        </div>
+        <div class="card content">
+            <div class="card-content">
+                <div class="textcontainer">
+                    <div class="text">
+                        <h1>
+                            Submit Experiments
+                        </h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <input type="file" id="file-exp" class="inputfile" style="z-index: 1; background-color: #444;" />
+                    <span id="file-name" class="file-box" style="color: white;"></span>
+                    <!-- <button type="button" onclick="uploadFile('experiments','file-exp')">
                         Submit
                     </button> -->
-            <div class="container1">
-              <button type="button" class="btn">
-                <span onclick="uploadFile('experiments','file-exp')"
-                  >SUBMIT</span
-                >
-              </button>
+                    <div class="container1">
+                        <button type="button" class="btn">
+                            <span onclick="uploadFile('experiments','file-exp')">SUBMIT</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="card form">
-        <div class="form-title">NOTES</div>
-      </div>
+        <div class="card form">
+            <div class="form-title">NOTES</div>
+        </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
@@ -105,19 +98,20 @@
 
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
     <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
-        authDomain: "planned-always-protected.firebaseapp.com",
-        databaseURL: "https://planned-always-protected.firebaseio.com",
-        projectId: "planned-always-protected",
-        storageBucket: "planned-always-protected.appspot.com",
-        messagingSenderId: "12130222742",
-        appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7",
-      };
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-      console.log("initialized");
+        var firebaseConfig = {
+            apiKey: "AIzaSyB4Oaf-yY9QJvkySmxmI9uzBW40b6eYOKk",
+            authDomain: "planned-always-protected.firebaseapp.com",
+            databaseURL: "https://planned-always-protected.firebaseio.com",
+            projectId: "planned-always-protected",
+            storageBucket: "planned-always-protected.appspot.com",
+            messagingSenderId: "12130222742",
+            appId: "1:12130222742:web:685b4f19a9cb9ae434f8b7",
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        console.log("initialized");
     </script>
     <script src="../js/upload.js" />
-  </body>
+</body>
+
 </html>
